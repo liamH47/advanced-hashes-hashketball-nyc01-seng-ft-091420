@@ -187,7 +187,6 @@ def player_stats(this_player_name)
    stats[:players].each do |x|
      if x[:player_name] == this_player_name
        new_hash = x 
-       new_hash.shift
        return new_hash
      end
    end
