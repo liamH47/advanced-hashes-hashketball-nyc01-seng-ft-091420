@@ -183,20 +183,7 @@ def team_colors(team_name)
 end
 
 def player_stats(this_player_name)
-  new_hash = {}
-  game_hash.collect do |location, team|
-    team.each do |attribute, _data|
-      next unless attribute == :players
-        game_hash[location][attribute].each do |player|
-          next unless player[:player_name] == this_player_name
-            new_hash = player.delete_if do |x, y|
-              x == :player_name
-            end
-          end
-        end
-  end
-      new_hash
-end
+ 
 
 def big_shoe_rebounds
   biggest_shoe = 0
