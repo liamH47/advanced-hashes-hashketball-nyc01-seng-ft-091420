@@ -185,7 +185,7 @@ end
 def player_stats(this_player_name)
  game_hash.each do |location, stats|
    stats[:players].each do |x|
-     if x[:player_name] == player_name
+     if x[:player_name] == this_player_name
        new_hash = x 
        new_hash.shift
        return new_hash
