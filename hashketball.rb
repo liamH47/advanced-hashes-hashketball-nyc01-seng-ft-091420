@@ -183,7 +183,16 @@ def team_colors(team_name)
 end
 
 def player_stats(this_player_name)
- 
+ game_hash.each do |location, stats|
+   stats[:players].each do |x|
+     if x[:player_name] == player_name
+       new_hash = x 
+       new_hash.shift
+       return new_hash
+     end
+   end
+ end
+end
 
 def big_shoe_rebounds
   biggest_shoe = 0
